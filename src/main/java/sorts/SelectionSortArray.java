@@ -1,10 +1,10 @@
 package sorts;
 
-public class BubbleSortArray {
+public class SelectionSortArray {
     private final long[] a;
     private int numberOfElements;
 
-    public BubbleSortArray(int maximumOfElements) {
+    public SelectionSortArray(int maximumOfElements) {
         this.a = new long[maximumOfElements];
         this.numberOfElements = 0;
     }
@@ -28,23 +28,26 @@ public class BubbleSortArray {
     }
 
     /**
-     * Пузырьковая сортировка. Два цикла проходят по массиву и сравнивают стоящие рядом элементы.
-     * Если порядок нарушен, меняет эти элементы местами. O(N^2).
+     * Сортировка выбором. При последовательном переборе выбирается самое малое значение
+     * и меняется местами со значением на том месте, откуда начался перебор. O(N^2), но
+     * работает быстрее пузырьковой сортировки за счёт меньшего количества перестановок.
      */
     public void sort() {
         for (int i = 0; i < numberOfElements - 1; i++) {
+            int minIndex = i;
             for (int j = i + 1; j < numberOfElements; j++) {
-                if (a[j] > a[i]) {
-                    long tmp = a[i];
-                    a[i] = a[j];
-                    a[j] = tmp;
+                if (a[j] < a[minIndex]) {
+                    minIndex = j;
                 }
             }
+            long temp = a[i];
+            a[i] = a[minIndex];
+            a[minIndex] = temp;
         }
     }
 
     public static void main(String[] args) {
-        BubbleSortArray array = new BubbleSortArray(10);
+        SelectionSortArray array = new SelectionSortArray(10);
         array.insert(7);
         array.insert(2);
         array.insert(9);

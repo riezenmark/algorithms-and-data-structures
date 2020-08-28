@@ -16,7 +16,7 @@ public class OrderedArray {
     /**
      * Алгоритм двоичного поиска. Каждую итерацию берётся значение в середине диапазона и сравнивается с искомым элементом.
      * В зависимости от результата сравнения значения и искомого элемета либо уточняются границы диапазона (уменьшаются в два раза),
-     * либо возвращается найденный элемент.
+     * либо возвращается найденный элемент. O(log N).
      * @param searchKey искомый элемент.
      * @return Индекс найденного элемента или -1, если элемент не найден.
      */
@@ -41,6 +41,9 @@ public class OrderedArray {
         }
     }
 
+    /**
+     * O(N)
+     */
     public void insert(long value) {
         int j;
         for (j = 0; j < numberOfElements; j++) {
@@ -56,6 +59,9 @@ public class OrderedArray {
         numberOfElements++;
     }
 
+    /**
+     * O(N)
+     */
     public boolean delete(long value) {
         int j = find(value);
         if (j == -1) {
@@ -70,6 +76,9 @@ public class OrderedArray {
         }
     }
 
+    /**
+     * O(N)
+     */
     public void display() {
         for (int j = 0; j < numberOfElements; j++) {
             System.out.print(a[j] + " ");
