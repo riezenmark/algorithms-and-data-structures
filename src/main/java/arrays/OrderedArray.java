@@ -72,7 +72,7 @@ public class OrderedArray {
 
     public void display() {
         for (int j = 0; j < numberOfElements; j++) {
-            System.out.println(a[j] + " ");
+            System.out.print(a[j] + " ");
         }
         System.out.println();
     }
@@ -87,6 +87,7 @@ public class OrderedArray {
         array.insert(4);
         System.out.printf("Размер массива: %s%n", array.size());
         array.display();
+        System.out.println();
 
         array.delete(4);
         System.out.printf("Размер массива: %s%n", array.size());
