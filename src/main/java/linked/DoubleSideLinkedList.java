@@ -1,10 +1,10 @@
 package linked;
 
-public class DoubleLinkedList {
+public class DoubleSideLinkedList {
     private SimpleLink first;
     private SimpleLink last;
 
-    public DoubleLinkedList() {
+    public DoubleSideLinkedList() {
         this.first = null;
         this.last = null;
     }
@@ -66,7 +66,7 @@ public class DoubleLinkedList {
     }
 
     public static void main(String[] args) {
-        DoubleLinkedList list = new DoubleLinkedList();
+        DoubleSideLinkedList list = new DoubleSideLinkedList();
 
         list.insertFirst(22);
         list.insertFirst(44);

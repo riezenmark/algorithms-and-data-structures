@@ -1,10 +1,10 @@
 package linked;
 
 public class LinkedQueue {
-    private DoubleLinkedList list;
+    private DoubleSideLinkedList list;
 
     public LinkedQueue() {
-        this.list = new DoubleLinkedList();
+        this.list = new DoubleSideLinkedList();
     }
 
     public boolean isEmpty() {

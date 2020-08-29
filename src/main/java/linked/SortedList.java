@@ -7,6 +7,13 @@ public class SortedList {
         this.first = null;
     }
 
+    public SortedList(SimpleLink[] linkArray) {
+        this.first = null;
+        for (SimpleLink simpleLink : linkArray) {
+            insert(simpleLink.data);
+        }
+    }
+
     /**
      * O(N)
      */
