@@ -11,18 +11,27 @@ public class LinkedList {
         return first == null;
     }
 
+    /**
+     * O(1)
+     */
     public void insertFirst(int id, double data) {
         Link newLink = new Link(id, data);
         newLink.next = first;
         first = newLink;
     }
 
+    /**
+     * O(1)
+     */
     public Link deleteFirst() {
         Link temp = first;
         first = first.next;
         return temp;
     }
 
+    /**
+     * O(N)
+     */
     public void display() {
         Link currentLink = first;
         while (currentLink != null) {
@@ -32,6 +41,9 @@ public class LinkedList {
         System.out.println();
     }
 
+    /**
+     * O(N)
+     */
     public Link find(int key) {
         Link currentLink = first;
         while (currentLink.id != key) {
@@ -44,6 +56,9 @@ public class LinkedList {
         return currentLink;
     }
 
+    /**
+     * O(N), но работает быстрее удаления в массиве из-за отсутствия необходимости перемещать значения
+     */
     public Link delete(int key) {
         Link currentLink = first;
         Link previousLink = first;
