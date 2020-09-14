@@ -1,10 +1,10 @@
 package ShellAndQuick;
 
-public class Array {
+public class Shell {
     private final long[] array;
     private int numberOfElements;
 
-    public Array(int maximumOfElements) {
+    public Shell(int maximumOfElements) {
         this.array = new long[maximumOfElements];
         this.numberOfElements = 0;
     }
@@ -50,7 +50,7 @@ public class Array {
 
     public static void main(String[] args) {
         int maxSize = 10;
-        Array arr = new Array(maxSize);
+        Shell arr = new Shell(maxSize);
 
         for (int j = 0; j < maxSize; j++) {
             long n = (int) (java.lang.Math.random() * 99);
