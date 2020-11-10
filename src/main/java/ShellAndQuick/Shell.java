@@ -20,6 +20,9 @@ public class Shell {
         System.out.println();
     }
 
+    /**
+     * Сортировка вставками каждого n-ного элемента (включая каждый 1ый в конце)
+     */
     public void shellSort() {
         int inner, outer;
         long temp;
